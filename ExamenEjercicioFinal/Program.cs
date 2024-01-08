@@ -17,6 +17,19 @@ namespace Examen
             Console.WriteLine("e. Sortir");
             Console.Write("Selecciona una opció: ");
         }
+        public static void ValidarSenar()
+        {
+            Console.Write("Introdueix un nombre per validar si és senar: ");
+            int nombre = Convert.ToInt32(Console.ReadLine());
+            if (nombre / 2 == 0)
+            {
+                Console.WriteLine("Es Senar");
+            }
+            else
+            {
+                Console.WriteLine("No es senar");
+            }
+        }
     }
 }
 
