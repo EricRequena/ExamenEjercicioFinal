@@ -30,6 +30,16 @@ namespace Examen
                 Console.WriteLine("No es senar");
             }
         }
+        public static double CalculaPotencia()
+        {
+            Console.Write("Introdueix la base: ");
+            double baseNombre = ValidarNombre();
+
+            Console.Write("Introdueix l'exponent: ");
+            double exponent = ValidarNombre();
+
+            return Math.Pow(baseNombre, exponent);
+        }
     }
 }
 
