@@ -40,6 +40,15 @@ namespace Examen
 
             return Math.Pow(baseNombre, exponent);
         }
+        public static int RetornaAleatori()
+        {
+            Random rand = new Random();
+            int rangInferior, rangSuperior;
+            Console.WriteLine("Introdueix el Rang Superior");
+            rangSuperior = Convert.ToInt32(Console.ReadLine());
+            rangInferior = Convert.ToInt32(Console.ReadLine());
+            return rand.Next(rangInferior, rangSuperior + 1);
+        }
     }
 }
 
