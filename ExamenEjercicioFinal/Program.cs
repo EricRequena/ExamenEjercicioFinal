@@ -5,6 +5,37 @@ namespace Examen
     {
         public static void Main()
         {
+            char opcio;
+
+            do
+            {
+                MostrarMenu();
+                opcio = Console.ReadKey().KeyChar;
+                Console.WriteLine();
+
+                switch (opcio)
+                {
+                    case 'a':
+                        ValidarSenar();
+                        break;
+                    case 'b':
+                        CalculaPotencia();
+                        break;
+                    case 'c':
+                        Console.WriteLine(RetornaAleatori());
+                        break;
+                    case 'd':
+                        ComptaVocalsConsonants();
+                        break;
+                    case 'e':
+                        Console.WriteLine("Programa finalitzat. Fins aviat!");
+                        break;
+                    default:
+                        Console.WriteLine("Opció no vàlida. Si us plau, tria una opció correcta.");
+                        break;
+                }
+
+            } while (opcio != 'e');
 
         }
         public static void MostrarMenu()
@@ -70,6 +101,15 @@ namespace Examen
                 }
             }
         }
+    }
+    public static double ValidarNombre()
+    {
+        double nombre;
+        while (!double.TryParse(Console.ReadLine(), out nombre) || nombre < 0)
+        {
+            Console.WriteLine("Si us plau, introdueix un nombre natural vàlid.");
+        }
+        return nombre;
     }
 }
 
