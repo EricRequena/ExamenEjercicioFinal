@@ -49,6 +49,27 @@ namespace Examen
             rangInferior = Convert.ToInt32(Console.ReadLine());
             return rand.Next(rangInferior, rangSuperior + 1);
         }
+        static void ComptaVocalsConsonants()
+        {
+            int vocals = 0;
+            int consonants = 0;
+
+            string text;
+
+            Console.WriteLine("Introdueix el text");
+            text = Console.ReadLine();
+
+            foreach (char c in text)
+            {
+                if (char.IsLetter(c))
+                {
+                    if ("aeiouAEIOU".Contains(c))
+                        vocals++;
+                    else
+                        consonants++;
+                }
+            }
+        }
     }
 }
 
